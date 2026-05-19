@@ -1,0 +1,89 @@
+graficos
+
+## 📊 1. Gráficos de distribución
+
+Sirven para entender cómo se distribuyen los datos.
+
+* **Histograma (`histplot`)**: muestra la frecuencia de valores.
+* **KDE (`kdeplot`)**: curva suave de densidad.
+* **ECDF (`ecdfplot`)**: función acumulativa.
+
+👉 Ejemplo típico: ver cómo se distribuyen edades, ingresos, etc.
+
+---
+
+## 📈 2. Gráficos relacionales
+
+Exploran relaciones entre variables.
+
+* **Scatter plot (`scatterplot`)**: relación entre dos variables.
+* **Line plot (`lineplot`)**: tendencias en el tiempo.
+
+👉 Muy útil para detectar correlaciones o patrones.
+
+---
+
+## 📦 3. Gráficos categóricos
+
+Comparan datos entre categorías.
+
+* **Bar plot (`barplot`)**: medias por categoría.
+* **Count plot (`countplot`)**: frecuencia de categorías.
+* **Box plot (`boxplot`)**: distribución con cuartiles.
+* **Violin plot (`violinplot`)**: distribución + densidad.
+* **Strip plot (`stripplot`)**: puntos individuales.
+* **Swarm plot (`swarmplot`)**: puntos sin superposición.
+
+---
+
+## 🔥 4. Gráficos de matrices
+
+Ideales para visualizar relaciones complejas.
+
+* **Heatmap (`heatmap`)**: matriz de valores (ej: correlaciones).
+* **Clustermap (`clustermap`)**: agrupamiento jerárquico.
+
+---
+
+## 🔗 5. Gráficos multivariados
+
+Analizan varias variables a la vez.
+
+* **Pair plot (`pairplot`)**: relaciones entre múltiples variables.
+* **Joint plot (`jointplot`)**: relación bivariada + distribuciones.
+* **PairGrid / FacetGrid**: estructuras avanzadas para personalización.
+
+---
+
+## 🎯 6. Gráficos de regresión
+
+Muestran relaciones con modelos estadísticos.
+
+* **Reg plot (`regplot`)**: regresión simple.
+* **LM plot (`lmplot`)**: regresión con agrupación.
+
+---
+
+## 🧠 Concepto importante
+
+Seaborn está construido sobre Matplotlib, pero añade:
+
+* Mejor estética por defecto
+* Integración con DataFrames (como los de Pandas)
+* Funciones de alto nivel
+
+---
+
+## 🧪 Ejemplo simple
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+tips = sns.load_dataset("tips")
+
+sns.scatterplot(data=tips, x="total_bill", y="tip")
+plt.show()
+```
+
+---
